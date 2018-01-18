@@ -2,3 +2,125 @@
 html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,time, mark, audio, video {	margin: 0;	padding: 0;	border: 0;	font-size: 100%;	font: inherit;	vertical-align: baseline;}/* HTML5 display-role reset for older browsers */article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {	display: block;}body {	line-height: 1;}ol, ul {	list-style: none;}blockquote, q {	quotes: none;}blockquote:before, blockquote:after,q:before, q:after {	content: '';	content: none;}table {	border-collapse: collapse;	border-spacing: 0;}
 
 /* ここにCSSを書いてデザインを入れよう */
+
+
+.header{
+  background-color: rgb(170,170,170);
+}
+
+/*サイトタイトル*/
+.header__title{
+  font-size: 40px;
+  text-align: center;
+  color: rgb(60,60,60);
+  padding: 50px;
+  background-color: rgb(153,153,153);
+  border: 3px;
+  border: solid;
+  border-color: rgb(143,143,143);
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+/*ナビゲーション*/
+.global-nav{
+  text-align: center;
+  color: rgb(60,60,60);
+  border: 3px;
+  border: solid;
+  border-color: rgb(143,143,143);
+}
+
+.global-nav__items{
+  padding: 20px;
+  background-color: rgb(170,170,170);
+}
+
+.global-nav__item{
+  display: inline-block;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.global-nav__link{
+  color: rgb(60,60,60);
+}
+
+/*Homeなど*/
+.bread-crumbs{
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: rgb(170,170,170);
+}
+
+.bread-crumbs__items{
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: rgb(92,92,92);
+}
+
+.bread-crumbs__item{
+  display: inline-block;
+}
+
+.bread-crumbs__link{
+  color: rgb(239,239,239)
+}
+
+/*広告バナー*/
+.top-ads{
+  text-align: center;
+  border: 3px;
+  border: solid;
+  border-color: rgb(143,143,143);
+  background-color: rgb(170,170,170);
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.top-ads__items{
+  border: 3px;
+  border: solid;
+  border-color: rgb(143,143,143);
+  background-color: rgb(203,203,203);
+}
+
+.top-ads__item{
+  display: inline-block;
+}
+
+/*本文*/
+.main{
+  display: block;
+  float: light;
+  width: 660px;
+}
+
+.aside{
+  float: reft;
+  width: 275px;
+}
+
+
+.footer{
+  background-color: rgb(170,170,170);
+}
+
+.footer-nav{
+  background-color: rgb(68,68,68);
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.footer-nav__items{
+
+}
+
+.footer-nav__link{
+  color: rgb(239,239,239);
+}
+
+.footer-copyright{
+
+}
