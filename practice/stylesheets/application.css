@@ -3,9 +3,10 @@ html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockqu
 
 /* ここにCSSを書いてデザインを入れよう */
 
-
 .container{
-  background-color: rgb(170,170,170);
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .header{
@@ -16,13 +17,15 @@ html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockqu
   background-color: rgb(170,170,170);
 }
 
-
 /*サイトタイトル*/
 .header__title{
+  position: relative;
   font-size: 40px;
+  font-weight: bold;
+  text-shadow: 0px 1px 0px #ffffff;
   text-align: center;
   color: rgb(60,60,60);
-  box-shadow:0px 0px 10px;
+  box-shadow: 0px 0px 10px;
   padding: 50px;
   background-color: rgb(153,153,153);
   border-color: rgb(143,143,143);
@@ -31,20 +34,18 @@ html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockqu
 
 /*ナビゲーション*/
 .global-nav{
-
+  position: relative;
 }
 
 .global-nav__items{
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
-  box-shadow:0px 0px 10px;
+  box-shadow: 0px 0px 10px;
   padding: 24px 0 24px 0;
   margin-left: 28px;
   margin-right: 28px;
 }
-
-
 
 .global-nav__item{
   display: inline-block;
@@ -53,14 +54,15 @@ html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockqu
 .global-nav__link {
   text-decoration: none;
   font-weight: bold;
+  text-shadow:0px 1px 0px #ffffff;
   color: rgb(60,60,60);
   background-color: rgb(207,207,207);
   padding: 24px 82px 24px 82px;
 }
 
-
 /*Homeなど*/
 .bread-crumbs{
+  position: relative;
   padding-left: 28px;
   padding-right: 28px;
   background-color: rgb(170,170,170);
@@ -76,6 +78,15 @@ html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockqu
 
 .bread-crumbs__item{
   display: inline-block;
+  list-style-type: none;
+}
+/*パンくずリスト*/
+li.bread-crumbs__item :before{
+  content: " > ";
+}
+
+li.bread-crumbs__item :first child before{
+  content:"";
 }
 
 .bread-crumbs__link{
@@ -85,6 +96,7 @@ html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockqu
 
 /*広告バナー上*/
 .top-ads{
+  position: relative;
   background-color: rgb(170,170,170);
   padding-left: 28px;
   padding-right: 28px;
@@ -118,6 +130,7 @@ html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockqu
 
 /*本文*/
 .main{
+  position: relative;
   display: block;
   line-height: 1.5;
   float: right;
@@ -130,11 +143,24 @@ html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockqu
 }
 
 /*ページタイトル*/
+.main-header__title::before {
+  position: absolute;
+  content: "★";
+  display: block;
+  text-indent:0em;
+  height: 8px;
+  left: 10px;
+  right: 2px;
+}
+
 .main-header__title{
+  position: relative;
+  font-weight: bold;
+  font-size: 35px;
+  text-indent: 1em;
   box-shadow:0px 0px 10px;
   padding: 10px;
   color: rgb(60,60,60);
-  font-size: 35px;
 }
 
 /*記事タイトルの親*/
@@ -145,8 +171,20 @@ html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockqu
 }
 
 /*記事タイトル*/
+.article__title::before {
+  position: absolute;
+  content: "★";
+  display: block;
+  height: 8px;
+  left: 100px;
+  right: 2px;
+  margin-left:235px;
+}
+
 .article__title{
+ font-weight: bold;
  font-size: 30px;
+ text-indent: 1em;
  color: (51,51,51);
 }
 
@@ -194,21 +232,22 @@ html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockqu
 
 /*食べ物の画像*/
 .article__image{
-  height: 50%;
   width: 100%;
 }
 
 /*小見出し*/
 .article__sub-sub-title{
+  position: relative;
   font-size: 20px;
   padding: 10px;
 }
 
 /*番号ありリスト*/
 .article__order-list{
+  position: relative;
+  list-style-type: decimal;
   padding-left: 30px;
   padding-right: 30px;
-  list-style-type: decimal;
 }
 
 .article__order-list-item{
@@ -217,22 +256,23 @@ html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockqu
 
 /*お問い合わせ*/
 .form{
-  box-shadow:0px 0px 10px;
+  position: relative;
   display: block;
+  box-shadow:0px 0px 10px;
   background-color: rgb(255,255,255);
-  width: auto;
   height: 1300px;
 }
 
 .form__title{
   font-size: 30px;
+  font-weight: bold;
   padding: 15px;
   margin-left: 50px;
-  font-weight: bold;
 }
 
 /*お問い合わせなどを並べた*/
 .form-item{
+  position: relative;
   display: flex;
   align-content: flex-start;
   padding: 10px;
@@ -253,12 +293,12 @@ html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockqu
   display: flex;
   justify-content: flex-start;
   float: right;
-  width: 770px;
-  padding: 10px;
   border-width: 2px;
   border-style: solid;
   border-radius: 5px;
   border-color: rgb(220,220,220);
+  width: 770px;
+  padding: 10px;
 }
 
 /*パスワード入力欄*/
@@ -266,11 +306,11 @@ html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockqu
   display: flex;
   justify-content: flex-start;
   float: right;
-  margin-right: 50px;
   width: 800px;
   border-width: 2px;
   border-style: solid;
   border-color: rgb(220,220,220);
+  margin-right: 50px;
 }
 
 /*複数行の入力欄*/
@@ -278,13 +318,13 @@ html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockqu
   display: flex;
   justify-content: flex-start;
   float: right;
-  margin-right: 65px;
   width: 800px;
   height: 300px;
   border-width: 2px;
   border-radius: 5px;
   border-style: solid;
   border-color: rgb(220,220,220);
+  margin-right: 65px;
 }
 
 .form-item__inline-items{
@@ -298,11 +338,11 @@ html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockqu
   border-radius: 5px;
   width: 90px;
   height: 40px;
-  margin-right: 10px;
   border-width: 2px;
   border-style: solid;
   border-color: rgb(215,215,215);
   background-color: rgb(238,238,238);
+  margin-right: 10px;
 }
 
 /*ラジオ*/
@@ -339,7 +379,6 @@ html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockqu
 /*リストセレクト*/
 .form-item__select-list{
   width: 700px;
-
 }
 
 /*セレクトB*/
@@ -353,18 +392,17 @@ html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockqu
   border-bottom-color: rgb(215,215,215);
 }
 
-
 /*ファイル選択*/
 input[type="file"]{
   display: block;
   font-size: 16px;
   line-height: 1.5;
   font-weight: bold;
-  padding: 5px 325px 5px 0px;
   border-width: 2px;
   border-style: inset;
   border-color: rgb(215,215,215);
   background-color: rgb(238,238,238);
+  padding: 5px 325px 5px 0px;
   -webkit-appearance: none;
 }
 
@@ -389,17 +427,18 @@ input[type="file"]{
 /*送信する*/
 input[type="submit"]{
   background-color: rgb(68,68,68);
+  color: rgb(239,239,239);
 }
 
 .form-item__action.is-submit{
   width: 300px;
-  padding: 15px;
-  margin-right: 15px;
   font-size: 20px;
   border-radius: 5px;
   border: 2px;
   border-style: outset;
   border-color: rgb(15,15,15);
+  padding: 15px;
+  margin-right: 15px;
 }
 
 /*リセット*/
@@ -409,22 +448,22 @@ input[type="reset"]{
 
 .form-item__action.is-reset{
   width: 300px;
-  padding: 15px;
   font-size: 20px;
   border-radius: 5px;
   border: 2px;
   border-style: outset;
+  padding: 15px;
 }
-
 
 /*サイドバー*/
 .aside{
+  position: relative;
   box-shadow:0px 0px 10px;
   display: block;
-  background-color: rgb(102,102,102);
-  padding-bottom: 2155px;
-  margin-left: 27px;
   width: 330px;
+  background-color: rgb(102,102,102);
+  padding-bottom: 2160px;
+  margin-left: 27px;
 }
 
 .aside-ads__items{
@@ -439,14 +478,16 @@ input[type="reset"]{
 .aside-ads__link{
   width: 340px;
 }
+
 .aside-ads__image{
   display: block;
-  width: 300px;
   text-align: center;
+  width: 300px;
 }
 
 /*ローカルナビ*/
 .local-nav{
+  position: relative;
   display: block;
   text-align: center;
   overflow: auto;
@@ -476,30 +517,29 @@ input[type="reset"]{
   text-decoration: none;
 }
 
-
-/*フッター
-ヒント1：.fotterのdisplayをflexにします。
-ヒント2：flexboxを指定していて要素が幅からあふれた場合の挙動を利用します。*/
+/*フッター*/
 .footer{
+  position: relative;
   box-shadow:0px 0px 10px;
   display: flex;
   flex-direction: column;
   background-color: rgb(68,68,68);
   margin-left: 28px;
   margin-right: 28px;
-  height: 500px;
 }
 
 .footer-nav{
+  position: relative;
   display: flex;
-  background-color: rgb(68,68,68);
-  height: 500px;
-  width: 500px;
   padding: 20px 20px 20px 10px;
 }
 
 .footer-nav__items{
+  line-height: 1.5;
+}
 
+li.footer-nav__item :before{
+  content: " > ";
 }
 
 .footer-nav__item{
@@ -507,34 +547,33 @@ input[type="reset"]{
   flex-flow: column wrap;
   align-content: flex-start;
   padding-left: 20px;
-  padding-right: 20px;
 }
 
 .footer-nav__link{
+  display: block;
   text-decoration: none;
-  line-height: 1.5;
   color: rgb(239,239,239);
+  padding: 5px;
 }
 
 /*作者*/
 .about-author{
-  display: block;
+  position: absolute;
   line-height: 2;
-  background-color: rgb(170,170,170);
   border-radius: 5px;
+  background-color: rgb(170,170,170);
   padding: 20px;
-  margin-left: 50%;
-  margin-right: 40px;
-  margin-bottom: 70px;
+  margin-top: 20px;
+  margin-left: 500px;
+  margin-right: 30px;
 }
 
 .about-author__title{
   color: rgb(65,65,65);
-  padding-top: 10px;
-  padding-bottom: 10px;
 }
 
 .about-author__image{
+  position: relative;
   display: flex;
   flex-direction: row;
   border-radius: 50%;
@@ -544,6 +583,7 @@ input[type="reset"]{
 
 /*私の名前 私の職業など 自己紹介文*/
 dd.about-author__descriptions{
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -556,7 +596,6 @@ dd.about-author__descriptions{
 }
 
 /*名前 職業など*/
-
 dt.about-author__term{
   display: flex;
   align-items: flex-start;
@@ -564,8 +603,9 @@ dt.about-author__term{
   width: 70px;
 }
 
-
 .footer-copyright{
+  position: relative;
+  padding-bottom: 0px;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -573,5 +613,6 @@ dt.about-author__term{
   background-color: rgb(68,68,68);
   color: rgb(239,239,239);
   padding: 30px;
-  margin-bottom: 28px;
+  margin-top: 50px;
+  bottom: 0px;
 }
