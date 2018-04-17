@@ -229,6 +229,7 @@ li.bread-crumbs__item:last-child ::after{
   margin-left: 350px;
   padding: 10px;
   background-color: rgb(221,221,221);
+  z-index: 2;
 }
 
 /*記事タイトル*/
@@ -390,6 +391,7 @@ li.bread-crumbs__item:last-child ::after{
   font-weight: bold;
   font-size: 20px;
   padding: 15px;
+  z-index: 10;
 }
 
 .article__sub-sub-title::after {
@@ -425,47 +427,57 @@ li.bread-crumbs__item:last-child ::after{
   justify-content: flex-end;
   background-color: rgb(255,255,255);
   height: 1200px;
-  margin-left: 350px;
-}
-
-.form__title::before{
-  position: absolute;
-  content: "　";
-  background-color: rgb(255,255,255);
-  display: block;
-  text-indent: 0em;
-  top: 22px;
-  left: 10px;
-  width: 35px;
-  height: 25px;
-  border-style: solid;
-  border-width: 3px;
-  border-color: rgb(0,0,0);
-}
-
-.form__title::after{
-  position: absolute;
-  content: "　";
-  display: block;
-  text-indent:0em;
-  background-color: rgb(255,255,255);
-  top: 25px;
-  left: 12px;
-  width: 0px;
-  height: 0px;
-  border-style: solid;
-  border: 2px;
-  border-color: rgb(0,0,0);
-  border-left:solid 18px transparent;
-  border-right:solid 18px transparent;
-  border-top:solid 25px rgb(0,0,0);
-}
-
-.form__title{
-  font-size: 30px;
+  padding: 20px 0 0 70px;
+  box-sizing: border-box;
   font-weight: bold;
-  padding: 15px;
-  text-indent: 1.5em;
+  margin-left: 300px;
+}
+
+.form::before {
+  content: "";
+  display: block;
+  width: 90px;
+  height: 60px;
+  background-color: #fff;
+  position: absolute;
+  left: 57px;
+  top: -40px;
+  z-index: 1;
+}
+
+h3.form__title{
+  font-size: 40px;
+  margin-bottom: 20px;
+  position: relative;
+  font-weight: bold;
+  z-index: 0;
+  padding-left: 65px;
+
+}
+
+h3.form__title::before {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 40px;
+  border: solid 2px black;
+  position: absolute;
+  left: 0;
+  top: 0;
+
+}
+
+h3.form__title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 60px;
+  border: solid 2px black;
+  position: absolute;
+  left: 0px;
+  top: -46px;
+  transform: rotate(45deg);
+
 }
 
 /*お問い合わせなどを並べた*/
@@ -474,8 +486,8 @@ li.bread-crumbs__item:last-child ::after{
   display: flex;
   align-content: flex-start;
   color: rgb(26,26,26);
-  padding: 10px;
   margin: 0 10px 20px 0;
+
 }
 
 .form-item__label{
@@ -662,6 +674,7 @@ aside{
   background-color: rgb(102,102,102);
   padding-bottom: 3957px;
   margin-left: 28px;
+  z-index: 3;
 }
 
 .aside-ads{
@@ -701,7 +714,6 @@ aside{
   height: 170px;
   margin: 1200px 0 0 30px;
   border-bottom: 3px;
-
 }
 
 .local-nav__items{
